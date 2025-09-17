@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
   };
 
   const handleMessageMe = () => {
-    const email = 'bishekdebbarma@example.com';
+    const email = 'debbarmabishek@gmail.com';
     const subject = 'Hello from your portfolio!';
     const body = 'Hi Bishek, I found your portfolio and would like to connect with you.';
     window.open(`mailto:${email}?subject=${subject}&body=${body}`, '_blank');
@@ -41,11 +41,11 @@ const Footer: React.FC = () => {
             <div className="space-y-2">
               <div className="flex items-center gap-2 text-gray-300 text-sm">
                 <Phone size={16} />
-                <span>+91 98765 43210</span>
+                <span>+91 8117096317</span>
               </div>
               <div className="flex items-center gap-2 text-gray-300 text-sm">
                 <Mail size={16} />
-                <span>bishekdebbarma@example.com</span>
+                <span>debbarmabishek@gmail.com</span>
               </div>
             </div>
           </div>
