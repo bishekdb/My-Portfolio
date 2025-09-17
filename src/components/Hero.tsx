@@ -7,7 +7,7 @@ const Hero: React.FC = () => {
   const [isDeleting, setIsDeleting] = useState(false);
   const [roleIndex, setRoleIndex] = useState(0);
   
-  const roles = ['Web Developer', 'UI/UX Designer', 'Coding Enthusiast', 'Creative Thinker'];
+  const roles = ['Web Developer', 'UI/UX Designer', 'Digital Innovator', 'Creative Thinker'];
   
   useEffect(() => {
     const currentRole = roles[roleIndex];

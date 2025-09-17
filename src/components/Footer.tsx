@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Bishek Debbarma</h3>
             <p className="text-gray-300 text-sm mb-4">
-              Web Design Student & Coding Enthusiast
+              Web Design Student & Digital Creator
             </p>
             <button
               onClick={handleDownloadCV}

@@ -67,7 +67,7 @@ const About: React.FC = () => {
               </h3>
               <div className="space-y-4 text-gray-700 leading-relaxed">
                 <p>
-                  As a dedicated web design student, I'm constantly exploring the intersection of 
+                  As a passionate web design student, I'm constantly exploring the intersection of 
                   creativity and technology. My passion for coding began with curiosity about how 
                   websites work, and it has evolved into a deep appreciation for clean code and 
                   thoughtful design.
@@ -94,7 +94,7 @@ const About: React.FC = () => {
                 <div className="grid grid-cols-2 gap-4 text-sm text-gray-700">
                   <div className="flex items-center gap-2">
                     <Coffee size={16} className="text-brown-500" />
-                    Coffee enthusiast
+                    Coffee connoisseur
                   </div>
                   <div className="flex items-center gap-2">
                     <Code size={16} className="text-blue-500" />
