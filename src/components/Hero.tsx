@@ -44,9 +44,9 @@ export const Hero = () => {
             }`}
           >
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full backdrop-blur-sm">
-              <Sparkles className="w-4 h-4 text-purple-400" />
-              <span className="text-sm text-purple-300">Student</span>
+            <div className="inline-flex items-center gap-2 px-3 md:px-4 py-1.5 md:py-2 bg-purple-500/10 border border-purple-500/20 rounded-full backdrop-blur-sm">
+              <Sparkles className="w-3 md:w-4 h-3 md:h-4 text-purple-400" />
+              <span className="text-xs md:text-sm text-purple-300">Student</span>
             </div>
 
             {/* Main Heading with Animated Word */}
