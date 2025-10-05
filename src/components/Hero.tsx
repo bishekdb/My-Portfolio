@@ -126,37 +126,37 @@ export const Hero = () => {
 
           {/* Right Side - Visual Element */}
           <div
-            className={`relative transform transition-all duration-1000 delay-300 lg:block hidden ${
+            className={`relative transform transition-all duration-1000 delay-300 ${
               isVisible ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'
             }`}
           >
             {/* Floating Cards */}
-            <div className="relative w-full h-[500px] xl:h-[600px] max-w-[500px] mx-auto">
+            <div className="relative w-full h-[400px] md:h-[500px] xl:h-[600px] max-w-[500px] mx-auto">
               {/* Main Card */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 xl:w-80 h-80 xl:h-96 bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-xl rounded-3xl border border-white/10 shadow-2xl transform hover:scale-105 transition-transform duration-500 p-6 xl:p-8 flex flex-col justify-between">
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 md:w-64 xl:w-80 h-64 md:h-80 xl:h-96 bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-xl rounded-3xl border border-white/10 shadow-2xl transform hover:scale-105 transition-transform duration-500 p-4 md:p-6 xl:p-8 flex flex-col justify-between">
                 <div>
-                  <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-400 rounded-2xl flex items-center justify-center mb-4">
-                    <Code2 className="w-8 h-8 text-white" />
+                  <div className="w-12 md:w-16 h-12 md:h-16 bg-gradient-to-br from-purple-400 to-pink-400 rounded-2xl flex items-center justify-center mb-3 md:mb-4">
+                    <Code2 className="w-6 md:w-8 h-6 md:h-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-2">Clean Code</h3>
-                  <p className="text-gray-300">Writing maintainable and scalable solutions</p>
+                  <h3 className="text-lg md:text-2xl font-bold text-white mb-1 md:mb-2">Clean Code</h3>
+                  <p className="text-sm md:text-base text-gray-300">Writing maintainable and scalable solutions</p>
                 </div>
-                <div className="text-6xl font-bold text-white/5">01</div>
+                <div className="text-4xl md:text-6xl font-bold text-white/5">01</div>
               </div>
 
               {/* Floating Card 1 - Top Right */}
-              <div className="absolute -top-4 -right-4 xl:top-0 xl:right-0 w-40 xl:w-48 h-40 xl:h-48 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 backdrop-blur-xl rounded-3xl border border-white/10 shadow-xl transform hover:scale-110 transition-all duration-500 p-4 xl:p-6 hover:rotate-3">
-                <div className="w-10 xl:w-12 h-10 xl:h-12 bg-gradient-to-br from-emerald-400 to-teal-400 rounded-xl flex items-center justify-center mb-2 xl:mb-3">
-                  <Palette className="w-5 xl:w-6 h-5 xl:h-6 text-white" />
+              <div className="absolute top-0 right-0 md:-top-4 md:-right-4 xl:top-0 xl:right-0 w-32 md:w-40 xl:w-48 h-32 md:h-40 xl:h-48 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 backdrop-blur-xl rounded-3xl border border-white/10 shadow-xl transform hover:scale-110 transition-all duration-500 p-3 md:p-4 xl:p-6 hover:rotate-3">
+                <div className="w-8 md:w-10 xl:w-12 h-8 md:h-10 xl:h-12 bg-gradient-to-br from-emerald-400 to-teal-400 rounded-xl flex items-center justify-center mb-1 md:mb-2 xl:mb-3">
+                  <Palette className="w-4 md:w-5 xl:w-6 h-4 md:h-5 xl:h-6 text-white" />
                 </div>
-                <h4 className="text-base xl:text-lg font-bold text-white mb-1">Design</h4>
-                <p className="text-xs xl:text-sm text-gray-300">Creative & Modern</p>
+                <h4 className="text-sm md:text-base xl:text-lg font-bold text-white mb-0.5 md:mb-1">Design</h4>
+                <p className="text-xs text-gray-300">Creative & Modern</p>
               </div>
 
               {/* Floating Card 2 - Bottom Left */}
-              <div className="absolute -bottom-4 -left-4 xl:bottom-0 xl:left-0 w-48 xl:w-56 h-32 xl:h-40 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 backdrop-blur-xl rounded-3xl border border-white/10 shadow-xl transform hover:scale-110 transition-all duration-500 p-4 xl:p-6 hover:-rotate-2">
-                <h4 className="text-lg xl:text-xl font-bold text-white mb-1 xl:mb-2">Fast & Optimized</h4>
-                <p className="text-xs xl:text-sm text-gray-300">Performance-focused development</p>
+              <div className="absolute bottom-0 left-0 md:-bottom-4 md:-left-4 xl:bottom-0 xl:left-0 w-40 md:w-48 xl:w-56 h-28 md:h-32 xl:h-40 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 backdrop-blur-xl rounded-3xl border border-white/10 shadow-xl transform hover:scale-110 transition-all duration-500 p-3 md:p-4 xl:p-6 hover:-rotate-2">
+                <h4 className="text-base md:text-lg xl:text-xl font-bold text-white mb-1 md:mb-1 xl:mb-2">Fast & Optimized</h4>
+                <p className="text-xs text-gray-300">Performance-focused development</p>
               </div>
 
               {/* Decorative Elements */}
