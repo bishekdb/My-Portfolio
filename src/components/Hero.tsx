@@ -5,7 +5,7 @@ import { portfolioConfig } from '../config/portfolio';
 export const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentWord, setCurrentWord] = useState(0);
-  const words = ['Creative', 'Innovative', 'Modern', 'Unique'];
+  const words = ['Creative', 'Modern', 'Unique'];
 
   useEffect(() => {
     setIsVisible(true);
