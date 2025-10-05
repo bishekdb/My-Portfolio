@@ -62,25 +62,25 @@ export const Hero = () => {
               </h1>
               
               {/* Animated Rotating Text */}
-              <p className="text-3xl md:text-4xl font-light text-gray-300 leading-tight">
-                <span>Building </span>
-                <span className="relative inline-block align-middle w-36 md:w-44 h-10 md:h-12 mx-1">
+              <p className="text-3xl md:text-4xl font-light text-gray-300 leading-tight flex items-center">
+                <span className="mr-4">Building</span>
+                <span className="relative w-[7.5rem] md:w-[9rem] h-10 md:h-12 flex items-center overflow-visible">
                   {words.map((word, idx) => (
                     <span
                       key={idx}
-                      className={`absolute left-0 top-0 w-full whitespace-nowrap bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent font-semibold transition-all duration-500 ${
+                      className={`absolute left-0 top-1/2 -translate-y-1/2 w-full whitespace-nowrap bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent font-semibold transition-all duration-500 ${
                         idx === currentWord
-                          ? 'opacity-100 translate-y-0'
+                          ? 'opacity-100 translate-x-0'
                           : idx < currentWord
-                          ? 'opacity-0 -translate-y-4'
-                          : 'opacity-0 translate-y-4'
+                          ? 'opacity-0 -translate-x-4'
+                          : 'opacity-0 translate-x-4'
                       }`}
                     >
                       {word}
                     </span>
                   ))}
                 </span>
-                <span> Solutions</span>
+                <span className="ml-4">Solutions</span>
               </p>
             </div>
 
