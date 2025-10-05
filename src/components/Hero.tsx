@@ -36,7 +36,7 @@ export const Hero = () => {
       <div className="absolute bottom-20 left-1/2 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{ animationDuration: '6s', animationDelay: '2s' }} />
 
       <div className="container mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-16 items-center min-h-screen py-20">
+        <div className="grid lg:grid-cols-2 gap-8 xl:gap-16 items-center min-h-screen py-20">
           {/* Left Side - Content */}
           <div
             className={`space-y-8 transform transition-all duration-1000 ${
@@ -126,14 +126,14 @@ export const Hero = () => {
 
           {/* Right Side - Visual Element */}
           <div
-            className={`relative transform transition-all duration-1000 delay-300 ${
+            className={`relative transform transition-all duration-1000 delay-300 lg:block hidden ${
               isVisible ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'
             }`}
           >
             {/* Floating Cards */}
-            <div className="relative w-full h-[600px]">
+            <div className="relative w-full h-[500px] xl:h-[600px] max-w-[500px] mx-auto">
               {/* Main Card */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-96 bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-xl rounded-3xl border border-white/10 shadow-2xl transform hover:scale-105 transition-transform duration-500 p-8 flex flex-col justify-between">
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 xl:w-80 h-80 xl:h-96 bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-xl rounded-3xl border border-white/10 shadow-2xl transform hover:scale-105 transition-transform duration-500 p-6 xl:p-8 flex flex-col justify-between">
                 <div>
                   <div className="w-16 h-16 bg-gradient-to-br from-purple-400 to-pink-400 rounded-2xl flex items-center justify-center mb-4">
                     <Code2 className="w-8 h-8 text-white" />
@@ -145,23 +145,23 @@ export const Hero = () => {
               </div>
 
               {/* Floating Card 1 - Top Right */}
-              <div className="absolute top-0 right-0 w-48 h-48 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 backdrop-blur-xl rounded-3xl border border-white/10 shadow-xl transform hover:scale-110 transition-all duration-500 p-6 hover:rotate-3">
-                <div className="w-12 h-12 bg-gradient-to-br from-emerald-400 to-teal-400 rounded-xl flex items-center justify-center mb-3">
-                  <Palette className="w-6 h-6 text-white" />
+              <div className="absolute -top-4 -right-4 xl:top-0 xl:right-0 w-40 xl:w-48 h-40 xl:h-48 bg-gradient-to-br from-emerald-500/20 to-teal-500/20 backdrop-blur-xl rounded-3xl border border-white/10 shadow-xl transform hover:scale-110 transition-all duration-500 p-4 xl:p-6 hover:rotate-3">
+                <div className="w-10 xl:w-12 h-10 xl:h-12 bg-gradient-to-br from-emerald-400 to-teal-400 rounded-xl flex items-center justify-center mb-2 xl:mb-3">
+                  <Palette className="w-5 xl:w-6 h-5 xl:h-6 text-white" />
                 </div>
-                <h4 className="text-lg font-bold text-white mb-1">Design</h4>
-                <p className="text-sm text-gray-300">Creative & Modern</p>
+                <h4 className="text-base xl:text-lg font-bold text-white mb-1">Design</h4>
+                <p className="text-xs xl:text-sm text-gray-300">Creative & Modern</p>
               </div>
 
               {/* Floating Card 2 - Bottom Left */}
-              <div className="absolute bottom-0 left-0 w-56 h-40 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 backdrop-blur-xl rounded-3xl border border-white/10 shadow-xl transform hover:scale-110 transition-all duration-500 p-6 hover:-rotate-2">
-                <h4 className="text-xl font-bold text-white mb-2">Fast & Optimized</h4>
-                <p className="text-sm text-gray-300">Performance-focused development</p>
+              <div className="absolute -bottom-4 -left-4 xl:bottom-0 xl:left-0 w-48 xl:w-56 h-32 xl:h-40 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 backdrop-blur-xl rounded-3xl border border-white/10 shadow-xl transform hover:scale-110 transition-all duration-500 p-4 xl:p-6 hover:-rotate-2">
+                <h4 className="text-lg xl:text-xl font-bold text-white mb-1 xl:mb-2">Fast & Optimized</h4>
+                <p className="text-xs xl:text-sm text-gray-300">Performance-focused development</p>
               </div>
 
               {/* Decorative Elements */}
-              <div className="absolute top-1/4 left-0 w-20 h-20 border-4 border-purple-500/30 rounded-full animate-pulse" />
-              <div className="absolute bottom-1/4 right-0 w-16 h-16 border-4 border-pink-500/30 rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
+              <div className="absolute top-1/4 -left-8 xl:left-0 w-16 xl:w-20 h-16 xl:h-20 border-4 border-purple-500/30 rounded-full animate-pulse" />
+              <div className="absolute bottom-1/4 -right-8 xl:right-0 w-12 xl:w-16 h-12 xl:h-16 border-4 border-pink-500/30 rounded-full animate-pulse" style={{ animationDelay: '1s' }} />
             </div>
           </div>
         </div>
