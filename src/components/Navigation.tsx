@@ -12,15 +12,35 @@ const navItems = [
 export const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
   const activeSection = useActiveSection();
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      const currentScrollY = window.scrollY;
+      
+      // Set isScrolled for styling
+      setIsScrolled(currentScrollY > 50);
+      
+      // Hide/show navbar based on scroll direction
+      if (currentScrollY < 50) {
+        // Always show at top of page
+        setIsVisible(true);
+      } else if (currentScrollY > lastScrollY) {
+        // Scrolling down - hide navbar
+        setIsVisible(false);
+      } else if (currentScrollY < lastScrollY) {
+        // Scrolling up - show navbar
+        setIsVisible(true);
+      }
+      
+      setLastScrollY(currentScrollY);
     };
+    
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [lastScrollY]);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -38,6 +58,8 @@ export const Navigation = () => {
       <nav
         className={`fixed left-1/2 -translate-x-1/2 z-40 transition-all duration-500 ${
           isScrolled ? 'top-2 md:top-4 scale-90 md:scale-95' : 'top-4 md:top-6 scale-95 md:scale-100'
+        } ${
+          isVisible ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
         }`}
       >
         <div className="bg-white/10 dark:bg-gray-900/30 backdrop-blur-xl border border-white/20 dark:border-gray-700/30 rounded-full px-4 md:px-8 py-2 md:py-4 shadow-2xl">
