@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react';
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Send, Sparkles } from 'lucide-react';
+import { Mail, Phone, MapPin, Github, Linkedin, Twitter, Send } from 'lucide-react';
 import { useScrollAnimation } from '../hooks/useScrollAnimation';
 import { portfolioConfig } from '../config/portfolio';
 
@@ -128,7 +128,6 @@ export const Contact = () => {
           }`}
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/10 border border-purple-500/20 rounded-full backdrop-blur-sm mb-4">
-            <Sparkles className="w-4 h-4 text-purple-400" />
             <span className="text-sm text-purple-300">Let's connect</span>
           </div>
           <h2 className="text-5xl md:text-6xl font-bold mb-6">
@@ -177,11 +176,11 @@ export const Contact = () => {
                 style={{ transitionDelay: `${index * 0.1}s` }}
               >
                 {/* Floating Icon */}
-                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${item.gradient} flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform duration-300 shadow-lg`}>
-                  <item.icon className="w-8 h-8 text-white" />
+                <div className={`w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-2xl bg-gradient-to-br ${item.gradient} flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform duration-300 shadow-lg`}>
+                  <item.icon className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white" />
                 </div>
                 
-                <p className="text-white text-xl font-bold">{item.value}</p>
+                <p className="text-white text-base sm:text-lg md:text-xl font-bold break-words">{item.value}</p>
                 
                 {/* Hover Effect */}
                 <div className="absolute inset-0 bg-gradient-to-br from-purple-500/0 to-pink-500/0 group-hover:from-purple-500/5 group-hover:to-pink-500/5 rounded-2xl transition-all duration-300" />
@@ -304,8 +303,7 @@ export const Contact = () => {
               style={{ transitionDelay: '0.4s' }}
             >
               <div className="bg-gradient-to-br from-slate-800/50 to-purple-900/20 backdrop-blur-xl rounded-3xl border border-white/10 p-8">
-                <h3 className="text-xl font-bold text-white mb-6 flex items-center gap-2">
-                  <Sparkles className="w-5 h-5 text-purple-400" />
+                <h3 className="text-xl font-bold text-white mb-6">
                   Follow Me
                 </h3>
                 
@@ -330,25 +328,6 @@ export const Contact = () => {
                       </div>
                     </a>
                   ))}
-                </div>
-              </div>
-
-              {/* Quick Stats */}
-              <div className="bg-gradient-to-br from-slate-800/50 to-purple-900/20 backdrop-blur-xl rounded-3xl border border-white/10 p-8">
-                <div className="space-y-6">
-                  <div className="text-center">
-                    <div className="text-4xl font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent mb-2">
-                      24h
-                    </div>
-                    <p className="text-gray-400 text-sm">Response Time</p>
-                  </div>
-                  <div className="h-px bg-gradient-to-r from-transparent via-purple-500/30 to-transparent" />
-                  <div className="text-center">
-                    <div className="text-4xl font-bold bg-gradient-to-r from-emerald-400 to-teal-400 bg-clip-text text-transparent mb-2">
-                      100%
-                    </div>
-                    <p className="text-gray-400 text-sm">Client Satisfaction</p>
-                  </div>
                 </div>
               </div>
             </div>

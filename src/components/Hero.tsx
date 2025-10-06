@@ -1,17 +1,17 @@
 import { useEffect, useState } from 'react';
-import { ArrowRight, Sparkles, Code2, Palette, ArrowDown } from 'lucide-react';
+import { ArrowRight, Code2, Palette, ArrowDown } from 'lucide-react';
 import { portfolioConfig } from '../config/portfolio';
 
 export const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [currentWord, setCurrentWord] = useState(0);
-  const words = ['Creative', 'Modern', 'Unique'];
+  const words = ['Creative', 'Modern'];
 
   useEffect(() => {
     setIsVisible(true);
     const interval = setInterval(() => {
       setCurrentWord((prev) => (prev + 1) % words.length);
-    }, 2000);
+    }, 3000);
     return () => clearInterval(interval);
   }, []);
 
@@ -45,7 +45,6 @@ export const Hero = () => {
           >
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-3 md:px-4 py-1.5 md:py-2 bg-purple-500/10 border border-purple-500/20 rounded-full backdrop-blur-sm">
-              <Sparkles className="w-3 md:w-4 h-3 md:h-4 text-purple-400" />
               <span className="text-xs md:text-sm text-purple-300">Student</span>
             </div>
 
@@ -61,26 +60,24 @@ export const Hero = () => {
                 </span>
               </h1>
               
-              {/* Animated Rotating Text */}
-              <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light text-gray-300 leading-tight flex items-center flex-wrap">
-                <span className="mr-2 sm:mr-3 md:mr-4">Building</span>
-                <span className="relative w-[5.5rem] sm:w-[6.5rem] md:w-[7.5rem] lg:w-[9rem] h-8 sm:h-9 md:h-10 lg:h-12 flex items-center overflow-hidden">
+              {/* Dynamic Tagline */}
+              <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-gray-300 font-light leading-tight flex items-center gap-0.5 sm:gap-1 md:gap-1.5">
+                <span>Crafting</span>
+                <span className="inline-block relative w-[110px] sm:w-[130px] md:w-[160px] lg:w-[190px] h-8 sm:h-10 md:h-12 lg:h-14">
                   {words.map((word, idx) => (
                     <span
-                      key={idx}
-                      className={`absolute left-0 top-1/2 -translate-y-1/2 w-full whitespace-nowrap bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent font-semibold transition-all duration-500 ${
+                      key={word}
+                      className={`absolute left-0 top-1/2 -translate-y-1/2 w-full text-center bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent font-bold transition-all duration-700 ${
                         idx === currentWord
-                          ? 'opacity-100 translate-x-0'
-                          : idx < currentWord
-                          ? 'opacity-0 -translate-x-4'
-                          : 'opacity-0 translate-x-4'
+                          ? 'opacity-100 scale-100'
+                          : 'opacity-0 scale-95'
                       }`}
                     >
                       {word}
                     </span>
                   ))}
                 </span>
-                <span className="ml-2 sm:ml-3 md:ml-4">Solutions</span>
+                <span>Solutions</span>
               </p>
             </div>
 
@@ -168,9 +165,9 @@ export const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
-        <span className="text-sm text-gray-400">Scroll to explore</span>
-        <ArrowDown className="w-5 h-5 text-gray-400" />
+      <div className="absolute bottom-6 sm:bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce z-30">
+        <span className="text-xs sm:text-sm text-gray-400 text-center">Scroll to explore</span>
+        <ArrowDown className="w-4 h-4 sm:w-5 sm:h-5 text-gray-400" />
       </div>
     </section>
   );
