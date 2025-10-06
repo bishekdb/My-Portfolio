@@ -35,11 +35,11 @@ export const Hero = () => {
       <div className="absolute top-40 right-20 w-96 h-96 bg-emerald-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{ animationDuration: '5s', animationDelay: '1s' }} />
       <div className="absolute bottom-20 left-1/2 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{ animationDuration: '6s', animationDelay: '2s' }} />
 
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-8 xl:gap-16 items-center min-h-screen py-20">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-8 xl:gap-16 items-center min-h-[calc(100vh-4rem)] lg:min-h-screen py-16 sm:py-20">
           {/* Left Side - Content */}
           <div
-            className={`space-y-8 transform transition-all duration-1000 ${
+            className={`space-y-4 sm:space-y-6 md:space-y-8 transform transition-all duration-1000 ${
               isVisible ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'
             }`}
           >
@@ -50,8 +50,8 @@ export const Hero = () => {
             </div>
 
             {/* Main Heading with Animated Word */}
-            <div className="space-y-4">
-              <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold leading-tight">
+            <div className="space-y-2 sm:space-y-3 md:space-y-4">
+              <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold leading-tight">
                 <span className="bg-gradient-to-r from-white via-purple-200 to-white bg-clip-text text-transparent">
                   {portfolioConfig.name.split(' ')[0]}
                 </span>
@@ -62,9 +62,9 @@ export const Hero = () => {
               </h1>
               
               {/* Animated Rotating Text */}
-              <p className="text-3xl md:text-4xl font-light text-gray-300 leading-tight flex items-center">
-                <span className="mr-4">Building</span>
-                <span className="relative w-[7.5rem] md:w-[9rem] h-10 md:h-12 flex items-center overflow-visible">
+              <p className="text-lg sm:text-xl md:text-3xl lg:text-4xl font-light text-gray-300 leading-tight flex items-center flex-wrap">
+                <span className="mr-2 sm:mr-3 md:mr-4">Building</span>
+                <span className="relative w-[5.5rem] sm:w-[6rem] md:w-[7.5rem] lg:w-[9rem] h-7 sm:h-8 md:h-10 lg:h-12 flex items-center overflow-hidden">
                   {words.map((word, idx) => (
                     <span
                       key={idx}
@@ -80,30 +80,30 @@ export const Hero = () => {
                     </span>
                   ))}
                 </span>
-                <span className="ml-4">Solutions</span>
+                <span className="ml-2 sm:ml-3 md:ml-4">Solutions</span>
               </p>
             </div>
 
             {/* Description */}
-            <p className="text-xl text-gray-400 leading-relaxed max-w-xl">
+            <p className="text-base sm:text-lg md:text-xl text-gray-400 leading-relaxed max-w-xl">
               {portfolioConfig.tagline}
             </p>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-3 sm:gap-4">
               <button
                 onClick={scrollToProjects}
-                className="group px-8 py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50 flex items-center gap-2"
+                className="group px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-purple-500 to-pink-500 text-white rounded-xl font-medium transition-all duration-300 transform hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50 flex items-center gap-2 text-sm sm:text-base"
               >
                 View Projects
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
               </button>
               <a
                 href="/Bishek-Debbarma-Resume.pdf"
                 download="Bishek-Debbarma-Resume.pdf"
-                className="px-8 py-4 border-2 border-purple-500/30 text-white rounded-xl font-medium hover:bg-purple-500/10 hover:border-purple-500 transition-all duration-300 backdrop-blur-sm flex items-center gap-2"
+                className="px-6 sm:px-8 py-3 sm:py-4 border-2 border-purple-500/30 text-white rounded-xl font-medium hover:bg-purple-500/10 hover:border-purple-500 transition-all duration-300 backdrop-blur-sm flex items-center gap-2 text-sm sm:text-base"
               >
-                <ArrowDown className="w-5 h-5" />
+                <ArrowDown className="w-4 h-4 sm:w-5 sm:h-5" />
                 Download Resume
               </a>
             </div>
@@ -126,12 +126,12 @@ export const Hero = () => {
 
           {/* Right Side - Visual Element */}
           <div
-            className={`relative transform transition-all duration-1000 delay-300 ${
+            className={`relative hidden lg:block transform transition-all duration-1000 delay-300 ${
               isVisible ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'
             }`}
           >
             {/* Floating Cards */}
-            <div className="relative w-full h-[400px] md:h-[500px] xl:h-[600px] max-w-[500px] mx-auto">
+            <div className="relative w-full h-[500px] xl:h-[600px] max-w-[500px] mx-auto">
               {/* Main Card */}
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 md:w-64 xl:w-80 h-64 md:h-80 xl:h-96 bg-gradient-to-br from-purple-500/20 to-pink-500/20 backdrop-blur-xl rounded-3xl border border-white/10 shadow-2xl transform hover:scale-105 transition-transform duration-500 p-4 md:p-6 xl:p-8 flex flex-col justify-between">
                 <div>
@@ -168,9 +168,9 @@ export const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce">
-        <span className="text-sm text-gray-400">Scroll to explore</span>
-        <ArrowDown className="w-5 h-5 text-gray-400" />
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-bounce z-20">
+        <span className="text-xs md:text-sm text-gray-400 text-center">Scroll to explore</span>
+        <ArrowDown className="w-4 h-4 md:w-5 md:h-5 text-gray-400" />
       </div>
     </section>
   );
