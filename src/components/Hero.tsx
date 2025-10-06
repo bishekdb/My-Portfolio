@@ -35,11 +35,11 @@ export const Hero = () => {
       <div className="absolute top-40 right-20 w-96 h-96 bg-emerald-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{ animationDuration: '5s', animationDelay: '1s' }} />
       <div className="absolute bottom-20 left-1/2 w-96 h-96 bg-pink-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse" style={{ animationDuration: '6s', animationDelay: '2s' }} />
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 xl:gap-16 items-center min-h-screen py-20">
           {/* Left Side - Content */}
           <div
-            className={`space-y-8 transform transition-all duration-1000 ${
+            className={`space-y-5 sm:space-y-6 md:space-y-8 transform transition-all duration-1000 ${
               isVisible ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'
             }`}
           >
@@ -50,8 +50,8 @@ export const Hero = () => {
             </div>
 
             {/* Main Heading with Animated Word */}
-            <div className="space-y-4">
-              <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold leading-tight">
+            <div className="space-y-3 sm:space-y-4">
+              <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold leading-tight">
                 <span className="bg-gradient-to-r from-white via-purple-200 to-white bg-clip-text text-transparent">
                   {portfolioConfig.name.split(' ')[0]}
                 </span>
@@ -62,9 +62,9 @@ export const Hero = () => {
               </h1>
               
               {/* Animated Rotating Text */}
-              <p className="text-3xl md:text-4xl font-light text-gray-300 leading-tight flex items-center">
-                <span className="mr-4">Building</span>
-                <span className="relative w-[7.5rem] md:w-[9rem] h-10 md:h-12 flex items-center overflow-visible">
+              <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-light text-gray-300 leading-tight flex items-center flex-wrap">
+                <span className="mr-2 sm:mr-3 md:mr-4">Building</span>
+                <span className="relative w-[5.5rem] sm:w-[6.5rem] md:w-[7.5rem] lg:w-[9rem] h-8 sm:h-9 md:h-10 lg:h-12 flex items-center overflow-hidden">
                   {words.map((word, idx) => (
                     <span
                       key={idx}
@@ -80,12 +80,12 @@ export const Hero = () => {
                     </span>
                   ))}
                 </span>
-                <span className="ml-4">Solutions</span>
+                <span className="ml-2 sm:ml-3 md:ml-4">Solutions</span>
               </p>
             </div>
 
             {/* Description */}
-            <p className="text-xl text-gray-400 leading-relaxed max-w-xl">
+            <p className="text-base sm:text-lg md:text-xl text-gray-400 leading-relaxed max-w-[95%] sm:max-w-xl">
               {portfolioConfig.tagline}
             </p>
 
